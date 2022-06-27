@@ -1,0 +1,21 @@
+{
+    "name": "sachinathu/iframe-modal-demo",
+    "description": "demo to text iframe modal",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Sachin Athu",
+            "email": "sachin2262716@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "sachinathu/iframe-modal": "@dev"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../iframe-modal-package"
+        }
+    ]
+}

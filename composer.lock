@@ -1,0 +1,49 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "bbccfe57adc6e631d27548dfbd69bc8e",
+    "packages": [
+        {
+            "name": "sachinathu/iframe-modal",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "../iframe-modal-package",
+                "reference": "4b9eacc944127b1cd02e354eb480f51dd37842eb"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "sachinathu\\IframeModal\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sachin Athu",
+                    "email": "sachin2262716@gmail.com"
+                }
+            ],
+            "description": "Pop up iframe in a modal for a given url",
+            "transport-options": {
+                "relative": true
+            }
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "sachinathu/iframe-modal": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
