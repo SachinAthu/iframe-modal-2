@@ -22,3 +22,173 @@ body {
     width: 100%;
     height: 100%;
 } */
+
+
+/* payment gateway modal  */
+.payment-gateway-modal {
+    width: 90vw;
+    height: 90vh;
+    z-index: 10500;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.75);
+    background-color: transparent;
+    display: none;
+    opacity: 0;
+}
+
+.payment-gateway-modal .content {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.payment-gateway-modal .content .close-btn {
+    position: relative;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.payment-gateway-modal .content .close-btn button,
+.payment-gateway-modal .content .close-btn button:hover, 
+.payment-gateway-modal .content .close-btn button:focus {
+    border: none;
+    outline: none;    
+    text-decoration: none;
+}
+
+.payment-gateway-modal .content .close-btn button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    background-color: transparent;
+    opacity: 0.5;
+    cursor: pointer;
+    padding: 0;
+}
+
+.payment-gateway-modal .content .close-btn button svg {
+    fill: #fff;
+    transform: scale(1.25);
+}
+
+.payment-gateway-modal .content .close-btn button:hover {
+    opacity: 0.75;
+}
+
+.payment-gateway-modal .content .body {
+    width: 100%;
+    flex: 1;
+    background-color: #fff;
+}
+
+.payment-gateway-modal .content .body iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.payment-gateway-modal-show {
+    display: block;
+    animation-name: payment-gateway-modal-fade-in;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+.payment-gateway-modal-show-permenent {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.payment-gateway-modal-remove {
+    animation-name: payment-gateway-modal-fade-out;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+/* */
+
+/* backdrop */
+.payment-gateway-modal-backdrop {
+    z-index: 10000;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    opacity: 0;
+}
+
+.payment-gateway-modal-show-backdrop {
+    display: block;
+    animation-name: payment-gateway-modal-backdrop-fade-in;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+.payment-gateway-modal-show-backdrop-permenent {
+    opacity: 0.5;
+}
+
+.payment-gateway-modal-remove-backdrop {
+    animation-name: payment-gateway-modal-backdrop-fade-out;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+/* */
+
+@keyframes payment-gateway-modal-fade-in {
+    from {
+        transform: translate(-50%, -50%) scale(0.75);
+        opacity: 0;        
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes payment-gateway-modal-fade-out {
+    from {
+        /* transform: translate(-50%, -50%) scale(1); */
+        opacity: 1;      
+    }
+
+    to {
+        /* transform: translate(-50%, -50%) scale(0.9); */
+        opacity: 0;
+    }
+}
+
+@keyframes payment-gateway-modal-backdrop-fade-in {
+    from {
+        opacity: 0;        
+    }
+
+    to {
+        opacity: 0.5;
+    }
+}
+
+@keyframes payment-gateway-modal-backdrop-fade-out {
+    from {
+        opacity: 0.5;        
+    }
+
+    to {
+        opacity: 0;
+    }
+}

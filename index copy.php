@@ -27,9 +27,9 @@
                 ],
             ];
             $iframe = new Index($request_data, null);
-            $res = $iframe->showModal();
+            $res = $iframe->showIframe();
             // var_dump($res);
-            // echo '<br>' . 'done1';
+            echo '<br>' . 'done1';
 
         }
     }
@@ -47,20 +47,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> 
 
-    <!-- <link href="./style.css" rel="stylesheet"> -->
+    <link href="./style.css" rel="stylesheet">
     <title>Iframe Demo</title>
 </head>
 <body>
     <div class="m-5">
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+        <!-- <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
             <input class="btn btn-primary" type="submit" name="submit" value="Start" />    
-        </form>
+        </form> -->
         
-        <!-- <button class="btn btn-primary" type="button" id="start-btn" onclick="openModal()">
+        <button class="btn btn-primary" type="button" id="start-btn" onclick="openModal()">
             Start
-        </button> -->
+        </button>
+
+        <!-- <div id="paymentgatewayModal" class="payment-gateway-modal">
+            <div class="content">
+                <div class="close-btn">
+                    <button id="paymentGatewayModalCloseBtn">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M18.984 6.422l-5.578 5.578 5.578 5.578-1.406 1.406-5.578-5.578-5.578 5.578-1.406-1.406 5.578-5.578-5.578-5.578 1.406-1.406 5.578 5.578 5.578-5.578z"></path>
+                    </svg>
+                    </button>
+                </div>
+
+               <div class="body">
+                    <iframe 
+                        src="https://www.onepay.lk/" 
+                        title="Onepay Merchant Panel"
+                    ></iframe>
+               </div>
+            </div>
+        </div>
+
+        <div id="paymentgatewayModalBackdrop" class="payment-gateway-modal-backdrop"></div> -->
     </div>
 
-    <!-- <script src="./script.js"></script> -->
+    <script src="./script.js"></script>
+    <!-- <script src="./script2.js"></script> -->
 </body>
 </html>

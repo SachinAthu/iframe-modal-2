@@ -2,7 +2,6 @@
     "name": "sachinathu/onepay-payment-gateway-demo",
     "description": "Demo to text onepay payment gateway package",
     "type": "project",
-    "license": "MIT",
     "authors": [
         {
             "name": "Sachin Athu",
@@ -11,6 +10,13 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "sachinathu/onepay-payment-gateway": "dev-main"
-    }
+        "sachinathu/onepay-payment-gateway": "@dev"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../onepay-payment-gateway"
+        }
+    ]
 }
+
