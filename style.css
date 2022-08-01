@@ -75,7 +75,7 @@ body {
 }
 
 .payment-gateway-modal .content .close-btn button svg {
-    fill: #fff;
+    fill: #ffffff;
     transform: scale(1.25);
 }
 
@@ -86,7 +86,7 @@ body {
 .payment-gateway-modal .content .body {
     width: 100%;
     flex: 1;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 .payment-gateway-modal .content .body iframe {
@@ -119,7 +119,7 @@ body {
 /* backdrop */
 .payment-gateway-modal-backdrop {
     z-index: 10000;
-    background-color: #000;
+    background-color: #000000;
     position: fixed;
     top: 0;
     left: 0;

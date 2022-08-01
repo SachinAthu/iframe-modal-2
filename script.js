@@ -14,7 +14,7 @@ function openModal() {
     }
     
     // add modal
-    const modalEls = Array.from(document.querySelectorAll(MODAL_ID));
+    const modalEls = Array.from(document.querySelectorAll(`#${MODAL_ID}`));
     if(modalEls.length === 0) {
         let modalEl = document.createElement('div');
         modalEl.setAttribute('id', MODAL_ID);
@@ -41,7 +41,7 @@ function openModal() {
     }
     
     // add backdrop
-    const backdropEls = Array.from(document.querySelectorAll(BACKDROP_ID));
+    const backdropEls = Array.from(document.querySelectorAll(`#${BACKDROP_ID}`));
     if(backdropEls.length === 0) {
         let backdropEl = document.createElement('div');
         backdropEl.setAttribute('id', BACKDROP_ID);
@@ -83,6 +83,24 @@ function openModal() {
         backdrop.removeEventListener('click', closeModal);
     }
     
+}
+
+function clearAll() {
+    const modal = document.getElementById('paymentgatewayModal');
+    if(modal) {
+        modal.remove();
+    }
+
+    const backdrop = document.getElementById('paymentgatewayModalBackdrop');
+    if(backdrop) {
+        backdrop.remove();
+    }
+
+    const styles = document.getElementById('paymentGatewayModalStyles');
+    if(styles) {
+        styles.remove();
+    }
+
 }
 
 
